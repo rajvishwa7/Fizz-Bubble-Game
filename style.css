@@ -1,0 +1,145 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy";
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: url("./img/bubbleFizz.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.panel {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 80%;
+  height: 80%;
+  background-color: #ead085;
+  opacity: 0.8;
+}
+
+.logo {
+  text-align: center;
+  font-size: 45px;
+  background-color: #db2035;
+  color: #ead085;
+}
+
+.ptop {
+  display: flex;
+  color: #fff;
+  font-size: 20px;
+  padding: 0px 25%;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  background-color: #926a2c;
+}
+
+.elem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.box {
+  color: #db2035;
+  font-weight: bolder;
+  font-size: 25px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.pbottom {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  width: 100%;
+  height: calc(100% - 100px);
+}
+
+.fizz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #db2035;
+  color: #fff;
+}
+
+.fizz:hover {
+  background-color: #b60418;
+  cursor: pointer;
+}
+
+.gameOver {
+  display: flex;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #b60418;
+  animation: gameMove 3s ease-in-out alternate infinite;
+}
+
+@keyframes gameMove {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 568px) {
+  .panel {
+    width: 90%;
+    height: 90%;
+  }
+  .logo {
+    font-size: 35px;
+    padding: 5px 0;
+  }
+  .ptop {
+    font-size: 15px;
+    height: 75px;
+    justify-content: center;
+  }
+  .box {
+    font-size: 25px;
+    padding: 8px 15px;
+  }
+  .elem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  @keyframes gameMove {
+    50% {
+      transform: scale(1.3);
+    }
+  }
+}
